@@ -22,9 +22,21 @@ class myConnect {
 }
 //END KONEKSI DATABASE
 
+class Users {
+    private $email;
+    private $password;
 
+    function set_loginData($email, $password) {
+        $this->email = $email;
+        $this->password = $password;
+    }
+    
+    function getEmail() {
+        return $this->email;
+    }
 
-
-
-
+    function getPassword() {
+        return $this->password;
+    }
+}
 ?>

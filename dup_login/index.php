@@ -1,4 +1,5 @@
 <?php
+
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Login Page</title>
+    <title>Page Login MultipleUser</title>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 <span class="login-text">login</span>
             </div>
             <div>
-                <form action="login.php" method="POST" class="form-login">
+                <form action="Action.php" method="POST" class="form-login">
                     <div class="input-kolom">
                         <div class="input-deployed">
                             <label for="email">Input Email</label>
@@ -32,7 +33,7 @@
                             <label for="password">Input Password</label>
                             <input type="password" placeholder="******" name="password" class="input-login" required>
                         </div>
-                            <button type="submit" class="btn" name="login">Submit</button>
+                            <button type="submit" class="btn" name="submit">Submit</button>
                         <div class="register-container">
                         <p class="acc-text">Don't have an account?
                         <span class="register-text"><a href="register.php">Register</a></span>
