@@ -18,6 +18,8 @@ if(isset($_POST['logout'])) {
     <title>Document</title>
 </head>
 <body>
+
+    <!-- INI KLO MAU PAKE YANG LANGSUNG SATU FILE, BUKA AJA COMMENT AN INI, TAPI YANG BAWAH TUH DI BIKIN COMMENT JUGA -->
     <!-- <?php 
 //    if($_SESSION['role'] == 'admin'){
 //     echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
@@ -27,8 +29,8 @@ if(isset($_POST['logout'])) {
 //     echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
 //     echo "<h4>Status :</h4>" . $_SESSION['role'];
 // }
-
     ?> -->
+    <!-- SAMPE SINI -->
 
 
     <h2>Selamat Datang <?php echo $_SESSION['fullname'];?></h2>
