@@ -18,17 +18,24 @@
                 <h2 class="page-title">Login Page</h2>
                 <h3 class="welcome-message">Welcome to Login Multiple User</h3>
                 <span class="login-text">login</span>
+                <!-- buat munculin notif -->
+                <?php
+                if (isset($_GET['message'])) {
+                    $msg = $_GET['message'];
+                    echo "<div class= 'notif-login'>$msg</div>";
+                }
+                ?>
             </div>
             <div>
                 <form action="Action.php" method="POST" class="form-login">
                     <div class="input-kolom">
-                        <div class="input-deployed">
+                        <div class="input-email">
                             <label for="email">Input Email</label>
                             <input type="email" placeholder="Email" name="email" class="input-login" required>
                         </div>
                         <div class="input-pass">
                             <label for="password">Input Password</label>
-                            <input type="password" placeholder="******" name="password" class="input-login" required>
+                            <input type="password" placeholder="******" name="password" class="input-login" autocomplete="off" required>
                         </div>
                             <button type="submit" class="btn" name="submit">Submit</button>
                         <div class="register-container">

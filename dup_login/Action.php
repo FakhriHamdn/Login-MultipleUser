@@ -2,6 +2,7 @@
 //kita akan panggil class objek dari class user
 require 'connection.php';
 require 'Connect.php';
+session_start(); //setiap codingan session harus ada session_start
 
 $user = new myUsers(); //new berarti user akan terbentuk sebagai objek, dan termasuk instansiasi
 
@@ -22,22 +23,29 @@ if(isset($_POST['submit'])) { //submit dpt dari name button, jadi ketik submit d
     $connection = $conn->getConnect();
     $result = $connection->query($sql);
 
-    //untuk ngecek datanya ada atau ngk
+    //validasi untuk ngecek datanya ada atau ngk, jika ada maka lakukan..
     if($result->num_rows > 0) {
-        echo "Data Cocok";
+        //data yang akan masuk didashboard
+        foreach($result as $row) {
+            //session digunakan untuk menampung data sementara dibrowser, dan data ini akan dimenghasilkan output pada dash.php
+            $_SESSION['status'] = "login"; 
+            $_SESSION['email'] = $row['email']; 
+            $_SESSION['fullname'] = $row['fullname']; 
+            $_SESSION['role'] = $row['role']; 
+        }
+        if ($role === 'admin') {
+            $_SESSION['role'] = 'admin';
+          } else {
+            $_SESSION['role'] = 'user';
+          }
+    header("location: /learnphp/dup_dashboard/dash.php?message= Data Valid");
     } else {
-        echo "data tidak cocok";
+        header("location: index.php?message=Incorrect Email or Password");
     }
 
 }
 }
 
-
-
-
-// $user->set_loginData($_POST['email'], $_POST['password']);
-// $email = $user->getEmail();
-// $password = $user->getPassword();
 
 
 ?>
