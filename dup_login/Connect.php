@@ -22,7 +22,6 @@ class myConnect {
 }
 //END KONEKSI DATABASE
 
-
 class Users {
     private $email;
     private $password;
