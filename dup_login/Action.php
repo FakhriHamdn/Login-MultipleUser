@@ -33,11 +33,7 @@ if(isset($_POST['submit'])) { //submit dpt dari name button, jadi ketik submit d
             $_SESSION['fullname'] = $row['fullname']; 
             $_SESSION['role'] = $row['role']; 
         }
-        if ($role === 'admin') {
-            $_SESSION['role'] = 'admin';
-          } else {
-            $_SESSION['role'] = 'user';
-          }
+
     header("location: /learnphp/dup_dashboard/dash.php?message= Data Valid");
     } else {
         header("location: index.php?message=Incorrect Email or Password");

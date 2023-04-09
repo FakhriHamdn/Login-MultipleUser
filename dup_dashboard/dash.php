@@ -18,8 +18,21 @@ if(isset($_POST['logout'])) {
     <title>Document</title>
 </head>
 <body>
-    <h2>Selamat Datang <?php echo $_SESSION['fullname'];?></h2>
-    <p>status : <?php echo $_SESSION['role'];?> </p>
+    <?php 
+   if($_SESSION['role'] == 'admin'){
+    echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
+    echo "<h4>Status :</h4>" . $_SESSION['role'];
+    echo "<a href='database.php'>Database</a>";
+} else {
+    echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
+    echo "<h4>Status :</h4>" . $_SESSION['role'];
+}
+
+    
+    
+    ?>
+    <!-- <h2>Selamat Datang <?php echo $_SESSION['fullname'];?></h2>
+    <p>status : <?php echo $_SESSION['role'];?> </p> -->
     <form action="" method="POST">
     <button name="logout" type="submit">logout</button>
     </form>
