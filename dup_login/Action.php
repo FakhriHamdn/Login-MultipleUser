@@ -1,6 +1,5 @@
 <?php 
 //kita akan panggil class objek dari class user
-require 'connection.php';
 require 'Connect.php';
 session_start(); //setiap codingan session harus ada session_start
 
