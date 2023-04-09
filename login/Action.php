@@ -32,16 +32,16 @@ if(isset($_POST['submit'])) { //submit dpt dari name button, jadi ketik submit d
             $_SESSION['fullname'] = $row['fullname']; 
             $_SESSION['role'] = $row['role']; 
         }
-        // header("location: ../dashboard/dash.php?message= Data Valid");
+        header("location: ../dashboard/dash.php?message= Data Valid");
 
         //INI KALO MAU FILE ADMIN/USER DIPISAH TAPI HEADER YANG DIATAS NIH, DI COMMENT DLU. 
-        //KLO MAU PAKE YANG DISATUIN JADI SATU FILE, DICOMMENT AJA BAGIAN INI
-        if($_SESSION['role'] == 'admin') {
-            header("location: ../dashboard/dash.php");
-        } else {
-            header("location: ../dashboard/index_user.php");
-        }
-        //SAMPE SINI YEE...
+        // //KLO MAU PAKE YANG DISATUIN JADI SATU FILE, DICOMMENT AJA BAGIAN INI
+        // if($_SESSION['role'] == 'admin') {
+        //     header("location: ../dashboard/dash.php");
+        // } else {
+        //     header("location: ../dashboard/index_user.php");
+        // }
+        // //SAMPE SINI YEE...
         
     } else {
         header("location: index.php?message=Incorrect Email or Password");

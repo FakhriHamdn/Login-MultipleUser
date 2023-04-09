@@ -20,20 +20,20 @@ if(isset($_POST['logout'])) {
 <body>
 
     <!-- INI KLO MAU PAKE YANG LANGSUNG SATU FILE, BUKA AJA COMMENT AN INI, TAPI YANG BAWAH TUH DI BIKIN COMMENT JUGA -->
-    <!-- <?php 
-//    if($_SESSION['role'] == 'admin'){
-//     echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
-//     echo "<h4>Status :</h4>" . $_SESSION['role'];
-//     echo "<a href='database.php'>Database</a>";
-// } else {
-//     echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
-//     echo "<h4>Status :</h4>" . $_SESSION['role'];
-// }
-    ?> -->
+    <?php 
+if($_SESSION['role'] == 'admin'){
+    echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
+    echo "<h4>Status :</h4>" . $_SESSION['role'];
+    echo "<a href='database.php'>Database</a>";
+} else {
+    echo "<h2>Selamat datang</h2>" . $_SESSION['fullname'];
+    echo "<h4>Status :</h4>" . $_SESSION['role'];
+}
+    ?>
     <!-- SAMPE SINI -->
 
 
-    <h2>Selamat Datang <?php echo $_SESSION['fullname'];?></h2>
+    <!-- <h2>Selamat Datang <?php echo $_SESSION['fullname'];?></h2>
     <p>status : <?php echo $_SESSION['role'];?> </p>
     <h3>Ini table admin ceritanya</h3>
     <p>males buat bikin sendiri aja</p>
@@ -41,7 +41,7 @@ if(isset($_POST['logout'])) {
         <tr>
             <th>Id</th>
         </tr>
-    </table>
+    </table> -->
     
     
     <form action="" method="POST">
